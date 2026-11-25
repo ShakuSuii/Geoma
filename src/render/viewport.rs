@@ -44,7 +44,7 @@ impl ViewRect {
     /// 判断世界坐标点是否在矩形内，四条边界上的点视为包含（闭区间）。
     /// # 示例
     /// ```
-    /// use cadrs::render::ViewRect;
+    /// use geoma::render::ViewRect;
     /// let rect = ViewRect::new(0.0, 0.0, 100.0, 100.0);
     /// assert!(rect.contains(50.0, 50.0));
     /// assert!(!rect.contains(150.0, 150.0));
@@ -169,7 +169,7 @@ impl Viewport {
     /// 返回 `(screen_x, screen_y)`，单位是屏幕像素。
     /// # 示例
     /// ```
-    /// use cadrs::render::Viewport;
+    /// use geoma::render::Viewport;
     /// let mut viewport = Viewport::with_size(800.0, 600.0);
     /// viewport.set_view(0.0, 0.0, 100.0, 100.0);
     /// let (sx, sy) = viewport.world_to_screen(50.0, 50.0); // (400.0, 300.0)

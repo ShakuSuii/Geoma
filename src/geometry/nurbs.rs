@@ -135,7 +135,7 @@ impl NURBS {
     ///
     /// # 示例
     /// ```
-    /// # use cadrs::geometry::{NURBS, Point};
+    /// # use geoma::geometry::{NURBS, Point};
     /// let nurbs = NURBS::from_points(
     ///     vec![
     ///         Point::new(0.0, 0.0, 0.0),

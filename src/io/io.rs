@@ -108,7 +108,7 @@ impl FormatInfo {
     /// 返回版本列表为空的格式信息，可继续用 [`FormatInfo::with_version`] 追加版本。
     /// # 示例
     /// ```
-    /// use cadrs::io::FormatInfo;
+    /// use geoma::io::FormatInfo;
     /// let format = FormatInfo::new("dxf", "DXF", "AutoCAD Format", false);
     /// assert_eq!(format.extension, "dxf");
     /// ```

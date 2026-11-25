@@ -65,7 +65,7 @@ impl Circle {
     ///
     /// # 示例
     /// ```
-    /// # use cadrs::geometry::{Circle, Point};
+    /// # use geoma::geometry::{Circle, Point};
     /// let circle = Circle::new(Point::origin(), 1.0);
     /// let p = circle.point_at_angle(0.0);
     /// assert!((p.x - 1.0).abs() < 1e-10 && p.y.abs() < 1e-10);

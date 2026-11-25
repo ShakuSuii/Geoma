@@ -131,7 +131,7 @@ impl RenderBuffer {
     /// - `color`：填充色，`(红, 绿, 蓝)`，每个分量 0~255。
     /// # 示例
     /// ```
-    /// use cadrs::render::RenderBuffer;
+    /// use geoma::render::RenderBuffer;
     /// let mut buffer = RenderBuffer::new(2, 2);
     /// buffer.clear((255, 255, 255));
     /// assert_eq!(buffer.pixels()[0], 0x00FFFFFF);
@@ -179,7 +179,7 @@ impl RenderBuffer {
     /// - `x`、`y`：像素坐标，原点在左上角。
     /// # 示例
     /// ```
-    /// use cadrs::render::RenderBuffer;
+    /// use geoma::render::RenderBuffer;
     /// let mut buffer = RenderBuffer::new(2, 2);
     /// buffer.set_pixel(1, 0, (255, 0, 0));
     /// assert_eq!(buffer.pixels()[1], 0x00FF0000);

@@ -858,7 +858,7 @@ impl DWGImporter {
     /// 返回 `None` 还表示开头的魔数不属于任何已知版本。
     /// # 示例
     /// ```
-    /// use cadrs::io::dwg::{DWGImporter, DWGVersion};
+    /// use geoma::io::dwg::{DWGImporter, DWGVersion};
     /// assert_eq!(DWGImporter::detect_version(b"AC1032"), Some(DWGVersion::R2018));
     /// ```
     pub fn detect_version(data: &[u8]) -> Option<DWGVersion> {

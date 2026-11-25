@@ -879,10 +879,10 @@ impl Default for BooleanEngine {
 ///
 /// # 示例
 /// ```
-/// use cadrs::geometry::Point;
-/// use cadrs::geometry::extended_geometry::Point as Point2D;
-/// use cadrs::geometry::Polyline;
-/// use cadrs::geometry::boolean::point_in_polygon;
+/// use geoma::geometry::Point;
+/// use geoma::geometry::extended_geometry::Point as Point2D;
+/// use geoma::geometry::Polyline;
+/// use geoma::geometry::boolean::point_in_polygon;
 ///
 /// let square = Polyline {
 ///     vertices: vec![Point2D::new(0.0, 0.0), Point2D::new(10.0, 0.0),
@@ -925,9 +925,9 @@ pub fn point_in_polygon(point: Point, polygon: &Polyline) -> bool {
 ///
 /// # 示例
 /// ```
-/// use cadrs::geometry::extended_geometry::Point;
-/// use cadrs::geometry::Polyline;
-/// use cadrs::geometry::boolean::polygon_area;
+/// use geoma::geometry::extended_geometry::Point;
+/// use geoma::geometry::Polyline;
+/// use geoma::geometry::boolean::polygon_area;
 ///
 /// let triangle = Polyline {
 ///     vertices: vec![Point::new(0.0, 0.0), Point::new(10.0, 0.0), Point::new(5.0, 10.0)],

@@ -1,10 +1,10 @@
-# Cadrs CAD 
+# Geoma CAD 
 
 A comprehensive Rust-based computer-aided design (CAD) library providing powerful 2D geometric modeling capabilities.
 
 ## Overview
 
-Cadrs CAD is a pure Rust implementation of a CAD kernel that offers extensive functionality for geometric modeling, rendering, data management, and file format support. The SDK is designed with a modular architecture, allowing users to enable only the features they need.
+Geoma CAD is a pure Rust implementation of a CAD kernel that offers extensive functionality for geometric modeling, rendering, data management, and file format support. The SDK is designed with a modular architecture, allowing users to enable only the features they need.
 
 ## Features
 
@@ -49,19 +49,19 @@ Cadrs CAD is a pure Rust implementation of a CAD kernel that offers extensive fu
 
 ### Installation
 
-Add Cadrs to your `Cargo.toml`:
+Add Geoma to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-cadrs = { path = "path/to/cadrs", features = ["geometry", "math", "data_structure", "io", "render"] }
+geoma = { path = "path/to/geoma", features = ["geometry", "math", "data_structure", "io", "render"] }
 ```
 
 ### Quick Example
 
 ```rust
-use cadrs::prelude::*;
+use geoma::prelude::*;
 
-fn main() -> Result<(), CadrsError> {
+fn main() -> Result<(), GeomaError> {
     // Create a new document
     let mut doc = Document::new();
     
@@ -108,7 +108,7 @@ The SDK is organized into the following modules:
 Configure the SDK with the following features:
 
 ```toml
-[dependencies.cadrs]
+[dependencies.geoma]
 path = "path/to/sdk"
 default-features = false
 features = [
@@ -155,7 +155,7 @@ cargo doc --all-features --open
 Or use the workspace configuration:
 
 ```bash
-cargo doc -p cadrs --all-features --open
+cargo doc -p geoma --all-features --open
 ```
 
 ## Testing
@@ -168,7 +168,7 @@ cargo test --all-features
 
 ## Performance
 
-Cadrs CAD SDK includes several performance optimizations:
+Geoma CAD SDK includes several performance optimizations:
 
 - **Parallel Processing**: Utilizes rayon for parallel computations
 - **Spatial Indexing**: Uses rstar for efficient spatial queries

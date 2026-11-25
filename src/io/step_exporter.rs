@@ -283,8 +283,8 @@ impl STEPExporter {
     /// 文件头的时间戳取当前 UTC 时间，因此同一文档两次导出的头部可能不同。
     /// # 示例
     /// ```
-    /// use cadrs::Document;
-    /// use cadrs::io::step_exporter::STEPExporter;
+    /// use geoma::Document;
+    /// use geoma::io::step_exporter::STEPExporter;
     /// let doc = Document::new("Test".to_string());
     /// let text = STEPExporter::new().export_to_string(&doc).unwrap();
     /// assert!(text.contains("ISO-10303-21"));

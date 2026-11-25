@@ -176,7 +176,7 @@ impl Arc {
     ///
     /// # 示例
     /// ```
-    /// # use cadrs::geometry::{Arc, Point};
+    /// # use geoma::geometry::{Arc, Point};
     /// let arc = Arc::from_three_points(
     ///     Point::new(1.0, 0.0, 0.0),
     ///     Point::origin(),

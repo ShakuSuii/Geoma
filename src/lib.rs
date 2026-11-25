@@ -6,7 +6,7 @@
 //! - 图形对象：`dimension`、`geometric_tolerance`、`hatch`、`text`、`multileader`、`layer`、`line_type`、`block_attribute`、`welding_symbol`、`group`、`dynamic_block`；
 //! - 数据交换与呈现：`io`、`xref`、`xdata`、`ole`、`sheet_set`、`layout`、`render`、`spatial`、`performance`、`surface_texture`。
 //!
-//! 调用者一般直接引入所需子模块（如 `cadrs::grid::Grid`），也可使用本文件再导出的
+//! 调用者一般直接引入所需子模块（如 `geoma::grid::Grid`），也可使用本文件再导出的
 //! [`Entity`](data_structure::Entity)、[`ObjectId`](data_structure::ObjectId)、
 //! [`Layer`](data_structure::Layer)、[`Document`](data_structure::Document) 与 [`Vector2`](math::Vector2)。
 

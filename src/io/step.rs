@@ -590,8 +590,8 @@ impl STEPImporter {
     /// 返回本格式的注册信息：扩展名 `step`、名称 STEP、文本（非二进制），版本列表为 AP203/AP214/AP242。
     /// # 示例
     /// ```
-    /// use cadrs::io::step::STEPImporter;
-    /// use cadrs::io::Importer;
+    /// use geoma::io::step::STEPImporter;
+    /// use geoma::io::Importer;
     /// assert!(STEPImporter::new().can_import("stp"));
     /// ```
     pub fn get_format_info(&self) -> crate::io::FormatInfo {

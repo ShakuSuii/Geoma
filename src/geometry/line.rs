@@ -68,7 +68,7 @@ impl Line {
     ///
     /// # 示例
     /// ```
-    /// # use cadrs::geometry::{Line, Point};
+    /// # use geoma::geometry::{Line, Point};
     /// let line = Line::new(Point::new(0.0, 0.0, 0.0), Point::new(10.0, 10.0, 0.0));
     /// let p = line.point_at_parameter(0.5);
     /// assert!((p.x - 5.0).abs() < 1e-10);

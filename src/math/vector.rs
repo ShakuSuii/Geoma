@@ -126,7 +126,7 @@ impl Vector2 {
     /// 返回值落在 (-π, π]；零向量返回 0.0。
     /// # 示例
     /// ```
-    /// let v = cadrs::math::Vector2::new(0.0, 1.0);
+    /// let v = geoma::math::Vector2::new(0.0, 1.0);
     /// assert!((v.angle() - std::f64::consts::FRAC_PI_2).abs() < 1e-12);
     /// ```
     #[inline]

@@ -50,8 +50,8 @@ pub enum IntersectionResult {
 ///
 /// # 示例
 /// ```
-/// use cadrs::geometry::{Point, Line};
-/// use cadrs::geometry::intersection::{intersect_line_line, IntersectionResult};
+/// use geoma::geometry::{Point, Line};
+/// use geoma::geometry::intersection::{intersect_line_line, IntersectionResult};
 ///
 /// let line1 = Line::new(Point::origin(), Point::new(1.0, 0.0, 0.0));
 /// let line2 = Line::new(Point::new(0.5, -0.5, 0.0), Point::new(0.5, 0.5, 0.0));
@@ -111,8 +111,8 @@ pub fn intersect_line_line(line1: Line, line2: Line) -> IntersectionResult {
 ///
 /// # 示例
 /// ```
-/// use cadrs::geometry::{Point, Line, Circle};
-/// use cadrs::geometry::intersection::{intersect_line_circle, IntersectionResult};
+/// use geoma::geometry::{Point, Line, Circle};
+/// use geoma::geometry::intersection::{intersect_line_circle, IntersectionResult};
 ///
 /// let line = Line::new(Point::new(-1.0, 0.0, 0.0), Point::new(1.0, 0.0, 0.0));
 /// let circle = Circle::new(Point::origin(), 0.5);

@@ -10,13 +10,13 @@
 //!
 //! 运行：`cargo test --manifest-path sdk/Cargo.toml --test dimension_integration`
 
-use cadrs::data_structure::{
+use geoma::data_structure::{
     make_arc, make_circle, make_line, DimensionType, Document, Entity, EntityGeometry,
 };
-use cadrs::dimension::strokes as dim;
-use cadrs::geometry::Point;
-use cadrs::io::{dxf, svg};
-use cadrs::render::tessellation::{document_bbox, entity_polylines};
+use geoma::dimension::strokes as dim;
+use geoma::geometry::Point;
+use geoma::io::{dxf, svg};
+use geoma::render::tessellation::{document_bbox, entity_polylines};
 
 /// 建立一份包含圆、圆弧与直线的样例图纸
 fn sample_document() -> Document {

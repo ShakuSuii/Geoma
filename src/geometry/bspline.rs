@@ -48,7 +48,7 @@ impl BSpline {
     ///
     /// # 示例
     /// ```
-    /// # use cadrs::geometry::{BSpline, Point};
+    /// # use geoma::geometry::{BSpline, Point};
     /// let spline = BSpline::from_points(
     ///     vec![
     ///         Point::new(0.0, 0.0, 0.0),

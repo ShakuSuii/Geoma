@@ -537,7 +537,7 @@ impl ExporterRegistry {
     /// 返回可直接使用的实例，无需再手工注册。
     /// # 示例
     /// ```
-    /// use cadrs::io::exporter_impl::ExporterRegistry;
+    /// use geoma::io::exporter_impl::ExporterRegistry;
     /// let registry = ExporterRegistry::new();
     /// assert!(registry.get_exporter("dxf").is_some());
     /// ```
@@ -618,7 +618,7 @@ impl Default for ExporterRegistry {
 /// 返回拥有所有权的导出器；`dxf`/`svg`/`json` 之外的扩展名返回 `None`。
 /// # 示例
 /// ```
-/// use cadrs::io::exporter_impl::get_exporter;
+/// use geoma::io::exporter_impl::get_exporter;
 /// assert!(get_exporter("dxf").is_some());
 /// assert!(get_exporter("dwg").is_none());
 /// ```

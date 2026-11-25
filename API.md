@@ -1,6 +1,6 @@
-# Cadrs CAD SDK API Documentation
+# Geoma CAD SDK API Documentation
 
-This document provides detailed API documentation for the Cadrs CAD SDK.
+This document provides detailed API documentation for the Geoma CAD SDK.
 
 ## Core Modules
 
@@ -22,14 +22,14 @@ pub struct Document {
 **Methods:**
 
 - `new() -> Document` - Creates a new empty document
-- `add_entity<E: Into<Entity>>(&mut self, entity: E) -> Result<EntityId, CadrsError>` - Adds an entity to the document
-- `remove_entity(&mut self, id: EntityId) -> Result<(), CadrsError>` - Removes an entity from the document
+- `add_entity<E: Into<Entity>>(&mut self, entity: E) -> Result<EntityId, GeomaError>` - Adds an entity to the document
+- `remove_entity(&mut self, id: EntityId) -> Result<(), GeomaError>` - Removes an entity from the document
 - `get_entity(&self, id: EntityId) -> Option<&Entity>` - Retrieves an entity by ID
 - `get_entity_mut(&mut self, id: EntityId) -> Option<&mut Entity>` - Retrieves a mutable reference to an entity
-- `set_current_layer(&mut self, layer: &str) -> Result<(), CadrsError>` - Sets the active layer
+- `set_current_layer(&mut self, layer: &str) -> Result<(), GeomaError>` - Sets the active layer
 - `get_current_layer(&self) -> Option<&Layer>` - Returns the current active layer
-- `add_layer(&mut self, layer: Layer) -> Result<LayerId, CadrsError>` - Adds a new layer
-- `add_block(&mut self, block: Block) -> Result<BlockId, CadrsError>` - Adds a new block definition
+- `add_layer(&mut self, layer: Layer) -> Result<LayerId, GeomaError>` - Adds a new layer
+- `add_block(&mut self, block: Block) -> Result<BlockId, GeomaError>` - Adds a new block definition
 
 #### Entity
 
@@ -415,9 +415,9 @@ The command module provides a command pattern implementation for CAD operations.
 
 ```rust
 pub trait Command {
-    fn execute(&mut self, context: &mut CommandContext) -> Result<CommandResult, CadrsError>;
-    fn undo(&mut self, context: &mut CommandContext) -> Result<CommandResult, CadrsError>;
-    fn redo(&mut self, context: &mut CommandContext) -> Result<CommandResult, CadrsError>;
+    fn execute(&mut self, context: &mut CommandContext) -> Result<CommandResult, GeomaError>;
+    fn undo(&mut self, context: &mut CommandContext) -> Result<CommandResult, GeomaError>;
+    fn redo(&mut self, context: &mut CommandContext) -> Result<CommandResult, GeomaError>;
     fn name(&self) -> &str;
     fn is_reversible(&self) -> bool;
 }
@@ -436,9 +436,9 @@ pub struct CommandManager {
 **Methods:**
 
 - `new(document: Weak<Document>) -> Self` - Creates a new command manager
-- `execute(&mut self, command: impl Command) -> Result<(), CadrsError>` - Executes a command
-- `undo(&mut self) -> Result<(), CadrsError>` - Undoes the last command
-- `redo(&mut self) -> Result<(), CadrsError>` - Redoes the last undone command
+- `execute(&mut self, command: impl Command) -> Result<(), GeomaError>` - Executes a command
+- `undo(&mut self) -> Result<(), GeomaError>` - Undoes the last command
+- `redo(&mut self) -> Result<(), GeomaError>` - Redoes the last undone command
 - `is_undoable(&self) -> bool` - Checks if undo is available
 - `is_redoable(&self) -> bool` - Checks if redo is available
 - `clear_history(&mut self)` - Clears command history
@@ -998,11 +998,11 @@ pub struct HatchPattern {
 
 ## Error Handling
 
-### CadrsError
+### GeomaError
 
 ```rust
 #[derive(Debug, Error)]
-pub enum CadrsError {
+pub enum GeomaError {
     #[error("Entity not found: {0}")]
     EntityNotFound(EntityId),
     
@@ -1034,9 +1034,9 @@ pub enum CadrsError {
 ### Basic Document Operations
 
 ```rust
-use cadrs::prelude::*;
+use geoma::prelude::*;
 
-fn main() -> Result<(), CadrsError> {
+fn main() -> Result<(), GeomaError> {
     // Create a new document
     let mut doc = Document::new();
     
@@ -1071,9 +1071,9 @@ fn transform_example() {
 ### File I/O
 
 ```rust
-use cadrs::io::{DXFExporter, DXFImporter, Exporter, Importer};
+use geoma::io::{DXFExporter, DXFImporter, Exporter, Importer};
 
-fn io_example() -> Result<(), CadrsError> {
+fn io_example() -> Result<(), GeomaError> {
     let doc = Document::new();
     
     // Export to DXF
@@ -1092,7 +1092,7 @@ fn io_example() -> Result<(), CadrsError> {
 ### Rendering with SVG
 
 ```rust
-fn svg_example(document: &Document) -> Result<(), CadrsError> {
+fn svg_example(document: &Document) -> Result<(), GeomaError> {
     let mut renderer = SVGRenderer::new();
     renderer.set_size(800.0, 600.0);
     

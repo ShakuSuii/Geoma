@@ -32,7 +32,7 @@ impl SVGRendererImpl {
     /// 返回新构造的字符串，可反复调用；元素列表与当前样式不会被修改。
     /// # 示例
     /// ```
-    /// use cadrs::render::svg_renderer::SVGRendererImpl;
+    /// use geoma::render::svg_renderer::SVGRendererImpl;
     /// let renderer = SVGRendererImpl::new(800, 600);
     /// assert!(renderer.get_svg_content().contains("<svg"));
     /// ```

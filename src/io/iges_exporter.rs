@@ -435,8 +435,8 @@ impl IGESExporter {
     /// 头段与全局段使用当前 UTC 日期，因此同一文档两次导出的内容可能不同。
     /// # 示例
     /// ```
-    /// use cadrs::Document;
-    /// use cadrs::io::iges_exporter::IGESExporter;
+    /// use geoma::Document;
+    /// use geoma::io::iges_exporter::IGESExporter;
     /// let doc = Document::new("Test".to_string());
     /// let text = IGESExporter::new().export_to_string(&doc).unwrap();
     /// assert!(text.contains("HDSW1"));

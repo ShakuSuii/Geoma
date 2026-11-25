@@ -23,7 +23,7 @@ impl ImporterRegistry {
     /// 返回可直接使用的实例，无需再手工注册。
     /// # 示例
     /// ```
-    /// use cadrs::io::importer_impl::ImporterRegistry;
+    /// use geoma::io::importer_impl::ImporterRegistry;
     /// let registry = ImporterRegistry::new();
     /// assert!(registry.get_importer("dxf").is_some());
     /// ```
@@ -105,7 +105,7 @@ impl Default for ImporterRegistry {
 /// 返回拥有所有权的导入器；未知扩展名返回 `None`。
 /// # 示例
 /// ```
-/// use cadrs::io::importer_impl::get_importer;
+/// use geoma::io::importer_impl::get_importer;
 /// assert!(get_importer("dxf").is_some());
 /// assert!(get_importer("unknown").is_none());
 /// ```

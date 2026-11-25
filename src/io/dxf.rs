@@ -119,9 +119,9 @@ fn write_solid_fan(out: &mut String, layer: &str, pts: &[Point], color: (u8, u8,
 /// 标注、文字、椭圆、样条与 NURBS 会被分解为折线笔画，实心填充 Hatch 与 Solid 则输出为 SOLID。
 /// # 示例
 /// ```
-/// use cadrs::data_structure::{make_circle, make_line, Document};
-/// use cadrs::geometry::Point;
-/// use cadrs::io::dxf::export;
+/// use geoma::data_structure::{make_circle, make_line, Document};
+/// use geoma::geometry::Point;
+/// use geoma::io::dxf::export;
 ///
 /// let mut doc = Document::new("test".to_string());
 /// doc.add_entity(make_line(Point::new2d(0.0, 0.0), Point::new2d(10.0, 0.0)));
@@ -369,7 +369,7 @@ fn add_polyline(
 /// 被跳过的内容：DXF 圆弧总按逆时针解释，部分椭圆以 64 段折线近似，重复的 SOLID 尾点会被去除。
 /// # 示例
 /// ```
-/// use cadrs::io::dxf::import;
+/// use geoma::io::dxf::import;
 ///
 /// let text = "0\nSECTION\n2\nENTITIES\n0\nLINE\n8\n0\n10\n0.0\n20\n0.0\n11\n1.0\n21\n1.0\n0\nENDSEC\n0\nEOF\n";
 /// let doc = import(text).unwrap();
